@@ -17,13 +17,18 @@
         .patch_countdown .minute{left: 43px;right: 0;top: 0;bottom: 0;width: 38px;height: 38px;}
         .patch_countdown .second{left: 84px;right: 0;top: 0;bottom: 0;width: 39px;height: 38px;}
         .patch_title{height: 21px;width: 142px;bottom: 60px;left: 0px; right: 0px; margin: 0 auto;}
-        .wrapper .product{right: 8px;top: 4px;height: 61px;width: 75px;}
-        .patch_note{height: 14px;width: 121px;left: 0px;margin: 0 auto;right: 0px;z-index: 1;bottom: 0px;}
+        .wrapper .product{right: 8px;top: 4px;height: 73px;width: 92px;}
+        .patch_note{height: 15px;width: 133px;left: 0px;margin: 0 auto;right: 0px;z-index: 1;bottom: 0px;}
+        @keyframes showZoomIn {
+        from {transform: scale3d(.5, .5, .5)}
+        to {transform: scale3d(1, 1, 1)}
+        }
         @keyframes pulse {
             0% {transform: scaleX(1)}
             50% {transform: scale3d(.95, .95, .95)}
             to {transform: scaleX(1)}
         }
+        .showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
         .pulse {animation-name: pulse;animation-duration: 2s;animation-iteration-count: infinite;}
     </style>
 </head>
@@ -32,9 +37,9 @@
         <div class="wrapper">
             <div class="patch_box absolute">
                 <div class="patch_countdown absolute"> </div>
-                <div class="patch_title absolute"><img src="assets/iftar.png" alt=""></div>
+                <div class="patch_title showZoomIn absolute"><img src="assets/iftar.png" alt=""></div>
                 <div class="product pulse absolute"><img src="assets/animation/mnemonic.png" alt=""></div>
-                <div class="patch_note absolute"><img src="assets/condition.png" alt=""></div>
+                <div class="patch_note showZoomIn absolute"><img src="assets/condition.png" alt=""></div>
             </div>
         </div>
     </a>
